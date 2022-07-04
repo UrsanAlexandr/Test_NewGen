@@ -13,7 +13,7 @@
 	    	})
     	} else if (range[1] == null) {
     		courses.forEach(element => {
-    			if ((element.prices[0] >= range[0] || element.prices[0] == null))
+    			if (element.prices[0] >= range[0] || (element.prices[0] == null && element.prices[1] >= range[0]))
     				result += element.name + "\n";
 	 	   })
     	} else {
